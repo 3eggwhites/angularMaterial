@@ -1,3 +1,91 @@
-<mat-checkbox>Subscribe to Newsletter</mat-checkbox>
+<div class="docs-example-viewer-wrapper">
+  <div class="docs-example-viewer-title">
+    CheckBox Demo
+  </div>
+  <div class="docs-example-viewer-body">
+    <mat-checkbox
+      #matCheckBox
+      [checked]="isChecked"
+      (change)="onChnage($event)"
+    >
+      Check Me
+    </mat-checkbox>
+    <div *ngIf="matCheckBox.checked">
+      To Show Me
+    </div>
+  </div>
+</div>
+
+<div class="docs-example-viewer-wrapper">
+  <div class="docs-example-viewer-title">
+    RadioButton Demo
+  </div>
+  <div class="docs-example-viewer-body">
+    <mat-radio-group #radio value="1">
+      <mat-radio-button value="1">
+        Option 1
+      </mat-radio-button>
+      <mat-radio-button value="2">
+        Option 2
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+
+<div class="docs-example-viewer-wrapper">
+  <div class="docs-example-viewer-title">
+    Select Demo
+  </div>
+  <div class="docs-example-viewer-body">
+    <mat-form-field>
+      <mat-select placeholder="Favorite food" [(ngModel)]="food">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{ food.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="docs-example-viewer-wrapper">
+  <div class="docs-example-viewer-title">
+    Input and Text Area Demo
+  </div>
+  <div class="docs-example-viewer-body">
+    <mat-form-field>
+      <input matInput placeholder="Favorite food" />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <textarea
+        matInput
+        matTextareaAutosize
+        placeholder="Leave a comment"
+      ></textarea>
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="docs-example-viewer-wrapper">
+  <div class="docs-example-viewer-title">
+    Date Picker Demo
+  </div>
+  <div class="docs-example-viewer-body">
+    <mat-form-field>
+      <input
+        [min]="minDate"
+        [max]="maxDate"
+        matInput
+        [matDatepicker]="datePicker"
+        placeholder="Please choose a date"
+      />
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="datePicker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #datePicker touchUi="true"></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
 
 <router-outlet></router-outlet>

@@ -1,5 +1,30 @@
-@import "~@angular\material\prebuilt-themes\deeppurple-amber.css";
+@import "~@angular\material\prebuilt-themes\indigo-pink.css";
 
-body{
-    padding: 20px;
+body {
+  padding: 20px;
+  font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica,
+    Arial, "Lucida Grande", sans-serif;
+}
+
+.docs-example-viewer-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+  margin: 4px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  width: 600px;
+}
+
+.docs-example-viewer-title {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  /*justify-content: center;*/
+  padding: 8px 20px;
+  color: rgba(0, 0, 0, 0.54);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.docs-example-viewer-body {
+  padding: 30px;
 }
